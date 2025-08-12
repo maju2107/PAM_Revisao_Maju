@@ -1,18 +1,18 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import LoginScreen from './src/screens/LoginScreen';
-import { StackScreen } from 'react-native-screens';
 
- const stack = createStackNavigator();
+
+ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-        <StackScreen name="Login" component={LoginScreen}/>
+        <Stack.Screen name="Login" options={{gestureEnabled: false, headerShown:false,headerLeft:() => null}}  component={LoginScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
