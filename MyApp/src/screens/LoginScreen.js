@@ -2,36 +2,37 @@ import * as React from 'react';
 import { View, Text, Button, TextInput, ScrollView,Image, BackHandler, Dimensions, Pressable} from 'react-native';
 import minhaImagem from '../../assets/casual_dog.png';
 import ImagemGoogle from '../../assets/Google.png';
+import styles from '../../style/style';
 
 const {width, height}= Dimensions.get('window'); // Dimensions retorna as dimensôes da tela
 
 export default function LoginScreen({navigation}) {
     return (
-        <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+        <View style={styles.containerPrincipal}>
             <Image
                 source={minhaImagem}
-                style={{width:width*1,height:height*0.4,marginTop:-97}} 
+                style={styles.imgPrincipal}
                 resizeMode='contain' // para a imagem não ficar distorcida
             />
-            <Text style={{fontSize:30,marginTop:50}}>Ótimo dia!</Text>
-            <Text style={{fontSize:15,marginTop:10}}>Como deseja acessar?</Text>
+            <Text style={styles.text1}>Ótimo dia!</Text>
+            <Text style={styles.text2}>Como deseja acessar?</Text>
 
-            <Pressable style={{backgroundColor:'rgb(20,200,113)',padding:10, borderRadius:8, marginTop:50,width:width*0.7,height:height*0.07, borderColor:'rgb(18,182,103)', borderWidth: 2}}>
+            <Pressable style={styles.botaoAcessar}>
                 
-                <View style={{flexDirection:'row',alignItems:'center'}}>
+                <View style={styles.ajustar}>
                     <Image
                         source={ImagemGoogle}
-                        style={{width:width*0.08,height:height*0.04, backgroundColor:'white', borderRadius:5}}
+                        style={styles.imgGoogle}
                     />
-                    <Text style={{fontSize:10, marginLeft:35, color:'white'}}>Como deseja acessar?</Text>
+                    <Text style={styles.textBotaoAcessar}>Como deseja acessar?</Text>
                 </View>   
             </Pressable>
 
-            <Pressable style={{backgroundColor:'white',padding:10, borderRadius:8, marginTop:20,width:width*0.7,height:height*0.07, borderColor:'rgb(18,182,103)', borderWidth: 2, alignItems:'center'}}
+            <Pressable style={styles.botaoOutrasOp}
                 onPress={()=> navigation.navigate('Acesse')}
             >
             
-                  <Text style={{fontSize:10,marginTop:6}}>Outras opções</Text>
+                  <Text style={styles.textOutrasOp}>Outras opções</Text>
 
             </Pressable>
         </View>
