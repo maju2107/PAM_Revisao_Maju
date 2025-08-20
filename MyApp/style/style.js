@@ -97,7 +97,22 @@ const styles = StyleSheet.create({
         height:height*0.09, 
         marginLeft:19, 
         borderRadius:5
-    }
+    },
+
+    checkbox:{
+        backgroundColor:'pink'
+    },
+
+    textLembrar:{
+        fontSize:12,
+        color: 'pink'
+    },
+
+    ajustar2 :{
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between'
+    },
 
 });
 
