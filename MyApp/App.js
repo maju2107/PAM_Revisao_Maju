@@ -13,7 +13,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" options={{gestureEnabled: false, headerShown:false,headerLeft:() => null}}  component={LoginScreen}/>
-        <Stack.Screen name="Acesse"  component={AcesseScreen}/>
+        <Stack.Screen name="Acesse"  component={AcesseScreen} options={{headerShown:true, title: ' '}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
