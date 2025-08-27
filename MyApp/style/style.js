@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
         borderWidth: 2
     },
     
-
     ajustar :{
         flexDirection:'row',
         alignItems:'center'
@@ -158,13 +157,11 @@ const styles = StyleSheet.create({
     imgGoogle2:{
         marginTop:20,
         marginLeft:100
-
     },
 
     imgFaBook:{
         marginTop:20,
         marginRight:100
-
     },
 
     linha:{
@@ -185,7 +182,20 @@ const styles = StyleSheet.create({
     textOu:{
          marginHorizontal: 10,
          fontSize:15
-    }
+    },
+
+    inputContainer: {
+        flexDirection: 'row', // Deixar em linha
+        alignItems: 'center' // e no centro
+   },
+    icon: {
+        width:width*0.07,
+        height:height*0.03,
+        position: 'absolute', // Deixar elemento
+        zIndex: 1,           // sobreposto ao outro
+        marginLeft:300,
+        borderRadius:14
+   }
 
 });
 

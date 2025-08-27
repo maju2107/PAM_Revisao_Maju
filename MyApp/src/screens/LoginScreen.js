@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, Button, TextInput, ScrollView,Image, BackHandler, Dimensions, Pressable} from 'react-native';
+import {View, Text,Image,Pressable} from 'react-native';
 import minhaImagem from '../../assets/casual_dog.png';
 import ImagemGoogle from '../../assets/Google.png';
 import styles from '../../style/style';

@@ -1,15 +1,17 @@
-import React, {useState, useEffect} from 'react';
-import { View, Text, Button, TextInput, ScrollView,Image, BackHandler, Dimensions, Pressable, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
+import { View, Text, TextInput, ScrollView,Image,Pressable,} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {CheckBox} from 'react-native-elements';
 import ImagemGoogle from '../../assets/Google.png';
 import ImagemFacebook from '../../assets/Facebook.png';
 import styles from '../../style/style';
 
-// const [selecionado,naoSelecionado] = useState(false);
 
 export default function AcesseScreen({navigation}) {
-    const [isChecked, setChecked] = useState(false);
+
+    const [isChecked, setChecked] = useState(false); // Ver se a checkBox está selecionada
+    const [senha, setSenha] = useState(''); // analisar o estado da senha
+    const [mostrarSenha, setMostrarSenha] = useState(false); // controlar o estado da senha em mostrar e esconder
 
     return (
     <ScrollView>
@@ -23,34 +25,44 @@ export default function AcesseScreen({navigation}) {
             style={styles.input}
             />
             <Text style={styles.label}>Senha</Text>
+            <View style={styles.inputContainer}>
             <TextInput
             placeholder='Digite sua Senha:'
-            secureTextEntry
+            secureTextEntry={!mostrarSenha}
+            value={senha}
+            onChangeText={setSenha}
             style={styles.input}
             />
-
+            <Pressable   style={({ pressed }) => [
+                styles.icon, { backgroundColor: pressed ? 'rgb(18,182,103)' : 'rgb(186, 194, 205)' }]} onPress={() => setMostrarSenha(!mostrarSenha)} >
+                <Icon name={mostrarSenha ? 'eye-off' : 'eye'} size={29} color="rgb(18,182,103)" /> 
+            </Pressable>
+            </View>
+            {/* Icon do olhinho não funciona, então improvisei */}
+            
             <View style={styles.ajustar2}>
                 <CheckBox
                     title="Lembrar senha"
                     checked={isChecked}
                     onPress={() => setChecked(!isChecked)}
 
-                    containerStyle={{
+                    containerStyle={{ // estilização do container que fica envolta da checkBox
                     backgroundColor: 'transparent',
                     borderWidth: 0,
                     padding: 0,
                     marginTop:27
                     }}
-                    textStyle={{
+                    textStyle={{ // estilização do texto que acompanha a checkBox
                     color: '#333',
                     fontWeight:'normal'
                     }}
-                    checkedColor="#007AFF" // Cor da marcação
-                    uncheckedColor="rgb(78, 220, 151)"
+                    checkedColor="#007AFF" // Cor da borda quando marca
+                    uncheckedColor="rgb(78, 220, 151)" // cor da borda de quando está desmarcado
                 />
                 <Text style={styles.textEsqueci}>Esqueci a senha</Text>
             </View>
 
+                {/* Botões cadastrar e acessar */}
             <View style={styles.ajustar2}>
 
             <Pressable style={styles.botaoAcessar}>
@@ -63,6 +75,7 @@ export default function AcesseScreen({navigation}) {
 
             </View>
 
+                {/* Texto de "Ou continue com" */}
             <View style={styles.ajustar3}>
                 <View style={styles.linha}/>
                 <Text style={styles.textOu}>Ou continue com</Text>
@@ -70,7 +83,7 @@ export default function AcesseScreen({navigation}) {
             </View>
 
             <View style={styles.ajustar2}>
-
+                {/* Imagens Google e FaceBook */}
                 <Image style={styles.imgGoogle2}
                     source={ImagemGoogle}
                 />
