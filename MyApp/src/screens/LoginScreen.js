@@ -4,8 +4,6 @@ import minhaImagem from '../../assets/casual_dog.png';
 import ImagemGoogle from '../../assets/Google.png';
 import styles from '../../style/style';
 
-const {width, height}= Dimensions.get('window'); // Dimensions retorna as dimensôes da tela
-
 export default function LoginScreen({navigation}) {
     return (
         <View style={styles.containerPrincipal}>
@@ -17,14 +15,14 @@ export default function LoginScreen({navigation}) {
             <Text style={styles.text1}>Ótimo dia!</Text>
             <Text style={styles.text2}>Como deseja acessar?</Text>
 
-            <Pressable style={styles.botaoAcessar}>
+            <Pressable style={styles.botaoAcessarCG}>
                 
                 <View style={styles.ajustar}>
-                    <Image
+                    <Image 
                         source={ImagemGoogle}
                         style={styles.imgGoogle}
                     />
-                    <Text style={styles.textBotaoAcessar}>Como deseja acessar?</Text>
+                    <Text style={styles.textBotaoAcessarCG}>Como deseja acessar?</Text>
                 </View>   
             </Pressable>
 

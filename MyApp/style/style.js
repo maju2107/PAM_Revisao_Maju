@@ -12,29 +12,33 @@ const styles = StyleSheet.create({
     imgPrincipal:{
         width:width*1,
         height:height*0.4,
-        marginTop:-97
+        marginTop:-97,
+        marginBottom: 6
     },
 
     text1 :{
-        FontSize:30,
-        marginTop:50
+        fontSize:30,
+        marginTop:60,
+        fontWeight:'bold'
     },
 
     text2:{
-        fontSize:15,
-        marginTop:10
+        fontSize:12,
+        marginTop:10,
+        fontWeight:'bold'
     },
 
-    botaoAcessar:{
+    botaoAcessarCG:{
         backgroundColor:'rgb(20,200,113)',
         padding:10,
         borderRadius:8, 
-        marginTop:50,
-        width:width*0.7,
+        marginTop:70,
+        width:width*0.85,
         height:height*0.07,
         borderColor:'rgb(18,182,103)',
         borderWidth: 2
     },
+    
 
     ajustar :{
         flexDirection:'row',
@@ -48,9 +52,9 @@ const styles = StyleSheet.create({
         borderRadius:5
     },
 
-    textBotaoAcessar:{
+    textBotaoAcessarCG:{
         fontSize:10, 
-        marginLeft:35, 
+        marginLeft:60, 
         color:'white'
     },
 
@@ -58,8 +62,8 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
         padding:10,
         borderRadius:8, 
-        marginTop:20,
-        width:width*0.7,
+        marginTop:10,
+        width:width*0.85,
         height:height*0.07, 
         borderColor:'rgb(18,182,103)', 
         borderWidth: 2, 
@@ -108,11 +112,91 @@ const styles = StyleSheet.create({
         color: 'pink'
     },
 
-    ajustar2 :{
+    ajustar2:{
         flexDirection:'row',
         alignItems:'center',
         justifyContent:'space-between'
     },
+
+    botaoAcessar:{
+        backgroundColor:'rgb(20,200,113)',
+        marginTop:90,
+        padding:10,
+        marginLeft:17,
+        borderRadius:8, 
+        width:width*0.43,
+        height:height*0.09,
+        borderColor:'rgb(18,182,103)',
+        borderWidth: 2,
+        alignItems:'center'
+    },
+
+    textAcessar:{
+        fontSize:15, 
+        color:'white',
+        marginTop:8
+    },
+
+    botaoCadastrar:{
+        backgroundColor:'white',
+        padding:10,
+        borderRadius:8, 
+        marginTop:90,
+        marginRight:17,
+        width:width*0.43,
+        height:height*0.09,
+        borderColor:'rgb(18,182,103)', 
+        borderWidth: 2, 
+        alignItems:'center'
+    },
+
+    textCadastrar:{
+        fontSize:15,
+        marginTop:8
+    },
+
+    imgGoogle2:{
+        marginTop:50,
+        marginLeft:100
+
+    },
+
+    imgFaBook:{
+        marginTop:50,
+        marginRight:100
+
+    },
+
+    linha:{
+        height:height*0.001,
+        width:width*0.4,
+        flex:1,
+        backgroundColor:'rgb(159, 160, 162)'
+    },
+
+    ajustar3:{
+        alignItems:'center',
+        marginVertical:10,
+        flexDirection:'row',
+        paddingHorizontal: 10,
+        marginTop:30
+    },
+
+    textOu:{
+         marginHorizontal: 10,
+         fontSize:15
+    },
+
+    iconButton: {
+    padding: 5,
+  },
+
+  senha:{
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    
+  }
 
 });
 

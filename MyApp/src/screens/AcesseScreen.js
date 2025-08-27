@@ -6,10 +6,11 @@ import ImagemGoogle from '../../assets/Google.png';
 import ImagemFacebook from '../../assets/Facebook.png';
 import styles from '../../style/style';
 
-const {width, height}= Dimensions.get('window');
-const [selecionado,naoSelecionado] = useState(false);
+// const [selecionado,naoSelecionado] = useState(false);
 
 export default function AcesseScreen({navigation}) {
+
+
     return (
     <ScrollView>
     <View>
@@ -28,7 +29,7 @@ export default function AcesseScreen({navigation}) {
             style={styles.input}
             />
 
-            <View>
+            {/* <View>
                 <CheckBox
                     value={selecionado}
                     onValueChange={naoSelecionado}
@@ -37,30 +38,35 @@ export default function AcesseScreen({navigation}) {
                 <Text>{selecionado? 'Selecionado': 'Nâo Selecionado'}</Text>
                 <Text>Lembrar Senha</Text>
                 <Text>ESqueci a senha</Text>
-            </View>
+            </View> */}
 
             <View style={styles.ajustar2}>
 
             <Pressable style={styles.botaoAcessar}>
-                <View style={styles.ajustar}>
-                    <Text style={styles.textBotaoAcessar}>Acessar</Text>
-                </View>   
+                <Text style={styles.textAcessar}>Acessar</Text>
             </Pressable>
 
-            <Pressable style={styles.botaoOutrasOp}>
-                <Text style={styles.textOutrasOp}>Cadastrar</Text>
+            <Pressable style={styles.botaoCadastrar}>
+                <Text style={styles.textCadastrar}>Cadastrar</Text>
             </Pressable>
 
             </View>
 
-            <View>
-                <Img
+            <View style={styles.ajustar3}>
+                <View style={styles.linha}/>
+                <Text style={styles.textOu}>Ou continue com</Text>
+                <View style={styles.linha}/>
+            </View>
+
+            <View style={styles.ajustar2}>
+
+                <Image style={styles.imgGoogle2}
                     source={ImagemGoogle}
                 />
-
-                <Img
+                <Image style={styles.imgFaBook}
                     source={ImagemFacebook}
                 />
+
             </View>
           
         </View>
