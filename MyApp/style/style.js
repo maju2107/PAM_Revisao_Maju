@@ -107,9 +107,9 @@ const styles = StyleSheet.create({
         backgroundColor:'pink'
     },
 
-    textLembrar:{
-        fontSize:12,
-        color: 'pink'
+    textEsqueci:{
+        marginRight:18,
+        marginTop:27
     },
 
     ajustar2:{
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
 
     botaoAcessar:{
         backgroundColor:'rgb(20,200,113)',
-        marginTop:90,
+        marginTop:20,
         padding:10,
         marginLeft:17,
         borderRadius:8, 
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
         padding:10,
         borderRadius:8, 
-        marginTop:90,
+        marginTop:20,
         marginRight:17,
         width:width*0.43,
         height:height*0.09,
@@ -156,13 +156,13 @@ const styles = StyleSheet.create({
     },
 
     imgGoogle2:{
-        marginTop:50,
+        marginTop:20,
         marginLeft:100
 
     },
 
     imgFaBook:{
-        marginTop:50,
+        marginTop:20,
         marginRight:100
 
     },
@@ -179,24 +179,13 @@ const styles = StyleSheet.create({
         marginVertical:10,
         flexDirection:'row',
         paddingHorizontal: 10,
-        marginTop:30
+        marginTop:70
     },
 
     textOu:{
          marginHorizontal: 10,
          fontSize:15
-    },
-
-    iconButton: {
-    padding: 5,
-  },
-
-  senha:{
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 10,
-    
-  }
+    }
 
 });
 

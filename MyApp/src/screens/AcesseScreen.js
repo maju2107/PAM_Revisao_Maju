@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { View, Text, Button, TextInput, ScrollView,Image, BackHandler, Dimensions, Pressable, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import CheckBox from '@react-native-community/checkbox';
+import {CheckBox} from 'react-native-elements';
 import ImagemGoogle from '../../assets/Google.png';
 import ImagemFacebook from '../../assets/Facebook.png';
 import styles from '../../style/style';
@@ -9,7 +9,7 @@ import styles from '../../style/style';
 // const [selecionado,naoSelecionado] = useState(false);
 
 export default function AcesseScreen({navigation}) {
-
+    const [isChecked, setChecked] = useState(false);
 
     return (
     <ScrollView>
@@ -29,16 +29,27 @@ export default function AcesseScreen({navigation}) {
             style={styles.input}
             />
 
-            {/* <View>
+            <View style={styles.ajustar2}>
                 <CheckBox
-                    value={selecionado}
-                    onValueChange={naoSelecionado}
-                    style={styles.checkbox}
+                    title="Lembrar senha"
+                    checked={isChecked}
+                    onPress={() => setChecked(!isChecked)}
+
+                    containerStyle={{
+                    backgroundColor: 'transparent',
+                    borderWidth: 0,
+                    padding: 0,
+                    marginTop:27
+                    }}
+                    textStyle={{
+                    color: '#333',
+                    fontWeight:'normal'
+                    }}
+                    checkedColor="#007AFF" // Cor da marcação
+                    uncheckedColor="rgb(78, 220, 151)"
                 />
-                <Text>{selecionado? 'Selecionado': 'Nâo Selecionado'}</Text>
-                <Text>Lembrar Senha</Text>
-                <Text>ESqueci a senha</Text>
-            </View> */}
+                <Text style={styles.textEsqueci}>Esqueci a senha</Text>
+            </View>
 
             <View style={styles.ajustar2}>
 
